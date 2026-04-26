@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>البركة للمعدات الثقيلة | El Baraka Heavy Equipment</title>
+<meta name="description" content="شركة البركة لتأجير المعدات الثقيلة في جميع محافظات مصر — مان لفت، سيزر لفت، كلارك، فوركليفت، ونش أحمال، مولد كهرباء" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Reem+Kufi:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0d0e10;
+    --bg-2: #15171b;
+    --bg-3: #1c1f25;
+    --ink: #f5f1e8;
+    --ink-dim: #b8b1a0;
+    --ink-mute: #6f6a5e;
+    --gold: #e8a838;
+    --gold-2: #f5c660;
+    --gold-deep: #b3791a;
+    --copper: #c97a3e;
+    --line: rgba(232, 168, 56, 0.22);
+    --line-strong: rgba(232, 168, 56, 0.55);
+    --grain: rgba(255,255,255,0.025);
+    --hazard: #ffcd3c;
+
+    --f-display: 'Bebas Neue', 'Reem Kufi', sans-serif;
+    --f-arabic-display: 'Reem Kufi', 'Tajawal', sans-serif;
+    --f-body: 'Tajawal', 'Reem Kufi', sans-serif;
+
+    --pad: clamp(20px, 4vw, 64px);
+    --maxw: 1400px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Grain overlay everywhere */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 3px 3px;
+    z-index: 1000;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ================== HAZARD STRIPE ================== */
+  .hazard-stripe {
+    height: 14px;
+    background:
+      repeating-linear-gradient(
+        135deg,
+        var(--hazard) 0 24px,
+        #1a1a1a 24px 48px
+      );
+    width: 100%;
+  }
+
+  /* ================== TOP BAR ================== */
+  .topbar {
+    background: #0a0a0c;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-dim);
+    font-weight: 500;
+  }
+  .topbar-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 10px var(--pad);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .topbar-left { display: flex; gap: 22px; flex-wrap: wrap; }
+  .topbar-left span { display: inline-flex; align-items: center; gap: 8px; }
+  .topbar-left svg { width: 14px; height: 14px; color: var(--gold); }
+  .topbar-right { display: flex; gap: 16px; }
+  .topbar-right a { color: var(--gold-2); font-weight: 700; letter-spacing: 0.5px; }
+
+  /* ================== NAV ================== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 14, 16, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 14px var(--pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 12px rgba(232, 168, 56, 0.25));
+  }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .logo-text .ar {
+    font-family: var(--f-arabic-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+  }
+  .logo-text .en {
+    font-family: var(--f-display);
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-top: 3px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--ink-dim);
+    transition: color 0.25s ease;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--gold-2); }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    background: var(--gold);
+    color: #1a1206;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(232, 168, 56, 0.3);
+  }
+  .nav-cta:hover {
+    background: var(--gold-2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 168, 56, 0.45);
+  }
+  .nav-cta svg { width: 16px; height: 16px; }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    padding: 10px;
+    color: var(--gold);
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  /* ================== HERO ================== */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px var(--pad) 100px;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(232, 168, 56, 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(201, 122, 62, 0.08) 0%, transparent 50%),
+      var(--bg);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.35;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--f-display);
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    padding: 8px 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+    background: rgba(232, 168, 56, 0.05);
+  }
+  .hero-eyebrow .dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(232, 168, 56, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+  }
+
+  .hero h1 {
+    font-family: var(--f-arabic-display);
+    font-size: clamp(40px, 6.5vw, 88px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .hero h1 .accent {
+    color: var(--gold);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+  .hero h1 .accent::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--gold);
+    opacity: 0.25;
+    z-index: -1;
+  }
+
+  .hero p.lead {
+    font-size: clamp(16px, 1.5vw, 19px);
+    color: var(--ink-dim);
+    max-width: 580px;
+    margin-bottom: 36px;
+    line-height: 1.8;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .btn-primary, .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: var(--f-body);
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: #1a1206;
+    box-shadow: 0 6px 24px rgba(232, 168, 56, 0.3);
+  }
+  .btn-primary:hover {
+    background: var(--gold-2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(232, 168, 56, 0.5);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(232, 168, 56, 0.05);
+  }
+  .btn-primary svg, .btn-ghost svg { width: 18px; height: 18px; }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  .stat .num {
+    font-family: var(--f-display);
+    font-size: clamp(34px, 4vw, 52px);
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .stat .label {
+    font-size: 13px;
+    color: var(--ink-mute);
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    max-height: 620px;
+  }
+  .hero-visual .frame {
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .hero-visual .frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, transparent 60%, rgba(232, 168, 56, 0.15) 100%),
+      linear-gradient(0deg, rgba(13, 14, 16, 0.6) 0%, transparent 50%);
+  }
+  .hero-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.05);
+  }
+  .hero-visual .corner-tl,
+  .hero-visual .corner-tr,
+  .hero-visual .corner-bl,
+  .hero-visual .corner-br {
+    position: absolute;
+    width: 28px; height: 28px;
+    border: 2px solid var(--gold);
+    z-index: 3;
+  }
+  .hero-visual .corner-tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .hero-visual .corner-tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+  .hero-visual .corner-bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+  .hero-visual .corner-br { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .hero-visual .badge {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    padding: 16px 22px;
+    z-index: 4;
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+    background: rgba(13, 14, 16, 0.85);
+  }
+  .hero-visual .badge .num {
+    font-family: var(--f-display);
+    font-size: 30px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .hero-visual .badge .lbl {
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ================== SECTION HEADERS ================== */
+  section { padding: 100px var(--pad); position: relative; }
+  .section-inner { max-width: var(--maxw); margin: 0 auto; }
+
+  .section-head {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .section-head-text { max-width: 720px; }
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--f-display);
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .section-tag::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .section-head h2 {
+    font-family: var(--f-arabic-display);
+    font-size: clamp(34px, 4.5vw, 60px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .section-head h2 .accent { color: var(--gold); }
+  .section-head .sub {
+    color: var(--ink-dim);
+    font-size: 16px;
+    max-width: 520px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  /* ================== SERVICES ================== */
+  #services {
+    background:
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service-card {
+    background: var(--bg-2);
+    padding: 36px 32px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .service-card:hover {
+    background: var(--bg-3);
+    transform: translateY(-4px);
+  }
+  .service-card:hover::before { width: 100%; }
+  .service-card:hover .service-img img {
+    transform: scale(1.08);
+  }
+
+  .service-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    margin-bottom: 24px;
+    border-radius: 2px;
+    position: relative;
+    background: var(--bg-3);
+  }
+  .service-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(13,14,16,0.55) 100%);
+  }
+  .service-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .service-num {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--f-display);
+    font-size: 14px;
+    color: var(--gold);
+    background: rgba(13, 14, 16, 0.85);
+    padding: 4px 10px;
+    border: 1px solid var(--line-strong);
+    z-index: 2;
+    letter-spacing: 2px;
+  }
+  .service-card h3 {
+    font-family: var(--f-arabic-display);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .service-card .en-name {
+    font-family: var(--f-display);
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+  }
+  .service-card p {
+    color: var(--ink-dim);
+    font-size: 15px;
+    line-height: 1.7;
+    flex: 1;
+  }
+  .service-meta {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .service-meta .specs {
+    color: var(--gold-2);
+    font-weight: 700;
+  }
+  .service-meta .more {
+    color: var(--ink-mute);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.25s, gap 0.25s;
+  }
+  .service-card:hover .service-meta .more {
+    color: var(--gold);
+    gap: 12px;
+  }
+
+  /* ================== MAN LIFT FEATURE SECTION ================== */
+  #manlift {
+    background: var(--bg);
+    position: relative;
+  }
+  .ml-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .ml-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    max-height: 700px;
+  }
+  .ml-visual .main-img {
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--line-strong);
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .ml-visual .main-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .ml-visual .height-badge {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--gold);
+    color: #1a1206;
+    padding: 28px 36px;
+    z-index: 5;
+    box-shadow: 0 20px 50px rgba(232, 168, 56, 0.4);
+  }
+  .ml-visual .height-badge .big {
+    font-family: var(--f-display);
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .ml-visual .height-badge .small {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .ml-visual .ruler {
+    position: absolute;
+    top: 0; bottom: 0;
+    right: -20px;
+    width: 16px;
+    z-index: 4;
+    background:
+      repeating-linear-gradient(
+        180deg,
+        transparent 0 24px,
+        var(--gold) 24px 25px
+      );
+    opacity: 0.5;
+  }
+
+  .ml-text h2 {
+    font-family: var(--f-arabic-display);
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .ml-text h2 .accent { color: var(--gold); }
+  .ml-text p {
+    color: var(--ink-dim);
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 30px;
+  }
+  .heights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .height-pill {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 18px 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .height-pill:hover {
+    border-color: var(--gold);
+    background: rgba(232, 168, 56, 0.08);
+    transform: translateY(-3px);
+  }
+  .height-pill .h {
+    font-family: var(--f-display);
+    font-size: 26px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .height-pill .l {
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  .ml-features {
+    display: grid;
+    gap: 14px;
+  }
+  .ml-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .ml-feature:last-child { border: none; }
+  .ml-feature .check {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: rgba(232, 168, 56, 0.15);
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .ml-feature .check svg {
+    width: 14px; height: 14px;
+    color: var(--gold);
+  }
+  .ml-feature .txt {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .ml-feature .txt small {
+    display: block;
+    color: var(--ink-mute);
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  /* ================== WHY US ================== */
+  #why {
+    background: var(--bg-2);
+    position: relative;
+    overflow: hidden;
+  }
+  #why::before {
+    content: "";
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232, 168, 56, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .why-card {
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    padding: 36px 28px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .why-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+  }
+  .why-card .icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border-radius: 2px;
+    box-shadow: 0 8px 24px rgba(232, 168, 56, 0.25);
+  }
+  .why-card .icon svg {
+    width: 28px; height: 28px;
+    color: #1a1206;
+  }
+  .why-card h4 {
+    font-family: var(--f-arabic-display);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .why-card p {
+    color: var(--ink-dim);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .why-card .num {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    font-family: var(--f-display);
+    font-size: 14px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+  }
+
+  /* ================== COVERAGE / MAP ================== */
+  #coverage {
+    background: var(--bg);
+    position: relative;
+  }
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .coverage-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .gov {
+    padding: 12px 14px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    text-align: center;
+    color: var(--ink-dim);
+    transition: all 0.25s ease;
+    border-radius: 2px;
+  }
+  .gov:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(232, 168, 56, 0.05);
+  }
+  .map-wrap {
+    position: relative;
+    aspect-ratio: 1/1;
+    max-height: 600px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-strong);
+    padding: 30px;
+    overflow: hidden;
+  }
+  .map-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.4;
+  }
+  .map-wrap svg {
+    width: 100%; height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .map-wrap .corner-label {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-family: var(--f-display);
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    z-index: 3;
+  }
+  .map-wrap .pin-pulse {
+    position: absolute;
+    width: 14px; height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    z-index: 4;
+    box-shadow: 0 0 0 0 rgba(232, 168, 56, 0.8);
+    animation: ping 2s ease-out infinite;
+  }
+  @keyframes ping {
+    0% { box-shadow: 0 0 0 0 rgba(232, 168, 56, 0.8); }
+    100% { box-shadow: 0 0 0 30px rgba(232, 168, 56, 0); }
+  }
+
+  /* ================== CTA STRIP ================== */
+  #cta-strip {
+    padding: 0;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  #cta-strip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0 30px,
+        rgba(0,0,0,0.04) 30px 31px
+      );
+  }
+  .cta-strip-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 70px var(--pad);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  #cta-strip h3 {
+    font-family: var(--f-arabic-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700;
+    color: #1a1206;
+    line-height: 1.2;
+  }
+  #cta-strip h3 small {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: rgba(26, 18, 6, 0.75);
+  }
+  .cta-phones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cta-phone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #1a1206;
+    color: var(--gold);
+    padding: 18px 26px;
+    font-family: var(--f-display);
+    font-size: 22px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+  .cta-phone:hover {
+    background: #000;
+    transform: translateX(-6px);
+  }
+  .cta-phone svg {
+    width: 22px; height: 22px;
+    color: var(--gold);
+  }
+
+  /* ================== CONTACT ================== */
+  #contact {
+    background: var(--bg-2);
+    position: relative;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .contact-info {
+    display: grid;
+    gap: 28px;
+  }
+  .contact-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg-3);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .contact-item:hover {
+    border-color: var(--gold);
+  }
+  .contact-item .ic {
+    width: 48px; height: 48px;
+    flex-shrink: 0;
+    background: rgba(232, 168, 56, 0.1);
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .contact-item .ic svg {
+    width: 22px; height: 22px;
+    color: var(--gold);
+  }
+  .contact-item h4 {
+    font-family: var(--f-arabic-display);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .contact-item p, .contact-item a {
+    color: var(--ink-dim);
+    font-size: 15px;
+    line-height: 1.6;
+    transition: color 0.25s;
+  }
+  .contact-item a:hover { color: var(--gold); }
+
+  .contact-form {
+    background: var(--bg-3);
+    border: 1px solid var(--line-strong);
+    padding: 40px;
+    border-radius: 2px;
+  }
+  .contact-form h3 {
+    font-family: var(--f-arabic-display);
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .contact-form .sub {
+    color: var(--ink-dim);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-field label {
+    font-size: 13px;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 14px 16px;
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 15px;
+    border-radius: 2px;
+    transition: border-color 0.25s;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .form-submit {
+    width: 100%;
+    padding: 18px;
+    background: var(--gold);
+    color: #1a1206;
+    border: none;
+    font-family: var(--f-body);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+  .form-submit:hover {
+    background: var(--gold-2);
+    transform: translateY(-2px);
+  }
+
+  /* ================== FOOTER ================== */
+  footer {
+    background: #08090b;
+    border-top: 1px solid var(--line);
+    padding: 70px var(--pad) 30px;
+  }
+  .footer-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  .footer-brand .logo-wrap { margin-bottom: 20px; }
+  .footer-brand p {
+    color: var(--ink-dim);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+  .footer-socials a {
+    width: 40px; height: 40px;
+    border: 1px solid var(--line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    border-radius: 2px;
+  }
+  .footer-socials a:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #1a1206;
+  }
+  .footer-socials svg { width: 16px; height: 16px; }
+
+  .footer-col h5 {
+    font-family: var(--f-arabic-display);
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .footer-col a {
+    color: var(--ink-dim);
+    font-size: 14px;
+    transition: color 0.2s, padding-right 0.2s;
+  }
+  .footer-col a:hover {
+    color: var(--gold);
+    padding-right: 6px;
+  }
+  .footer-bottom {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink-mute);
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-bottom .made {
+    color: var(--gold-2);
+    font-weight: 600;
+  }
+
+  /* ================== WHATSAPP FLOAT ================== */
+  .wa-float {
+    position: fixed;
+    bottom: 26px;
+    left: 26px;
+    width: 60px; height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+    z-index: 99;
+    transition: all 0.3s ease;
+    animation: wa-bounce 3s ease-in-out infinite;
+  }
+  .wa-float:hover {
+    transform: scale(1.1);
+  }
+  .wa-float svg { width: 30px; height: 30px; color: #fff; }
+  @keyframes wa-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* ================== REVEAL ANIMATION ================== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
+
+  /* ================== RESPONSIVE ================== */
+  @media (max-width: 1024px) {
+    .hero-inner, .ml-grid, .coverage-grid, .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-visual { max-height: 480px; }
+    .services-grid, .why-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .cta-strip-inner { grid-template-columns: 1fr; text-align: right; }
+  }
+
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      right: 0; left: 0;
+      flex-direction: column;
+      background: var(--bg-2);
+      padding: 24px var(--pad);
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .services-grid, .why-grid, .form-row {
+      grid-template-columns: 1fr;
+    }
+    .heights-grid { grid-template-columns: repeat(2, 1fr); }
+    .coverage-list { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .hero { min-height: auto; padding: 50px var(--pad) 70px; }
+    section { padding: 70px var(--pad); }
+    .ml-visual .height-badge { left: 0; bottom: -20px; padding: 18px 22px; }
+    .ml-visual .height-badge .big { font-size: 38px; }
+    .topbar-inner { font-size: 12px; }
+    .topbar-left { gap: 14px; }
+    .nav-cta span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hazard stripe top -->
+<div class="hazard-stripe"></div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        ٦ أكتوبر، الحي ١٢ — خلف فودافون، أمام بنزينة توتال
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        نعمل على مدار الساعة
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:01023032502">٠١٠٢٣٠٣٢٥٠٢</a>
+      <span style="color:var(--ink-mute)">|</span>
+      <a href="tel:01065469895">٠١٠٦٥٤٦٩٨٩٥</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo-wrap">
+      <img src="logo.png" alt="البركة للمعدات الثقيلة" class="logo-img" />
+      <div class="logo-text">
+        <span class="ar">البركة</span>
+        <span class="en">EL BARAKA</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#manlift">المان لفت</a></li>
+      <li><a href="#why">لماذا نحن</a></li>
+      <li><a href="#coverage">التغطية</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <a href="tel:01023032502" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>اتصل الآن</span>
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="القائمة">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>HEAVY EQUIPMENT RENTAL · EGYPT</span>
+      </div>
+      <h1>
+        معدات ثقيلة <span class="accent">آمنة وحديثة</span><br/>
+        لمشاريعك تحت الإنشاء
+      </h1>
+      <p class="lead">
+        شركة البركة بتوفرلك كل اللي هتحتاجه — مان لفت، سيزر لفت، فوركليفت، ونش أحمال،
+        ومولدات كهرباء بكل الأطوال والمواصفات. سفتي كامل، أسعار خارج المنافسة،
+        وعروض خاصة للشركات والمقاولين في جميع محافظات مصر.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary">
+          اطلب عرض سعر
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7" transform="scale(-1,1) translate(-24,0)"/></svg>
+        </a>
+        <a href="#services" class="btn-ghost">
+          استعرض المعدات
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">+٢٧</div>
+          <div class="label">محافظة نخدمها</div>
+        </div>
+        <div class="stat">
+          <div class="num">٢٤/٧</div>
+          <div class="label">دعم ومتابعة</div>
+        </div>
+        <div class="stat">
+          <div class="num">+٦</div>
+          <div class="label">أنواع معدات</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-d2">
+      <div class="frame">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="معدات ثقيلة" onerror="this.src='https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&w=1200'" />
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+        <div class="badge">
+          <div class="num">١٠٠٪</div>
+          <div class="lbl">سفتي وضمان جودة</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <div class="section-tag">OUR FLEET · أسطولنا</div>
+        <h2>كل اللي محتاجه <span class="accent">في مكان واحد</span></h2>
+      </div>
+      <p class="sub">
+        أسطول كامل من المعدات الثقيلة الحديثة بصيانة دورية وفحص سفتي قبل كل تشغيل.
+        إيجار يومي، أسبوعي، أو شهري بأسعار خارج المنافسة.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="service-img">
+          <span class="service-num">٠١</span>
+          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80" alt="مان لفت ديزل" onerror="this.src='https://images.pexels.com/photos/271667/pexels-photo-271667.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>مان لفت ديزل</h3>
+        <div class="en-name">DIESEL MAN LIFT</div>
+        <p>
+          رافعات شخصية ديزل بجميع الارتفاعات من ١٢ متر حتى ٤٠ متر. مثالية للأعمال
+          الخارجية والمواقع الإنشائية اللي محتاجة قوة ومرونة في الحركة.
+        </p>
+        <div class="service-meta">
+          <span class="specs">١٢م — ٤٠م</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-d1">
+        <div class="service-img">
+          <span class="service-num">٠٢</span>
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80" alt="مان لفت كهرباء" onerror="this.src='https://images.pexels.com/photos/162539/architecture-building-construction-build-162539.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>مان لفت كهرباء</h3>
+        <div class="en-name">ELECTRIC MAN LIFT</div>
+        <p>
+          رافعات كهربائية صامتة بدون عوادم — مثالية للأعمال الداخلية في المولات،
+          المخازن، والمستشفيات. حركة سلسة وأمان عالي.
+        </p>
+        <div class="service-meta">
+          <span class="specs">حتى ١٦م</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-d2">
+        <div class="service-img">
+          <span class="service-num">٠٣</span>
+          <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80" alt="سيزر لفت" onerror="this.src='https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>سيزر لفت كهرباء</h3>
+        <div class="en-name">SCISSOR LIFT</div>
+        <p>
+          منصات مقصية رأسية بأطوال متعددة، خفيفة وسهلة المناورة، مناسبة للأعمال
+          داخل الأماكن الضيقة وأعمال الصيانة الدورية.
+        </p>
+        <div class="service-meta">
+          <span class="specs">٦م — ١٤م</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-img">
+          <span class="service-num">٠٤</span>
+          <img src="https://images.unsplash.com/photo-1620662736427-b8a198f52a4d?auto=format&fit=crop&w=900&q=80" alt="فوركليفت" onerror="this.src='https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>فوركليفت ١٤ — ١٧ طن</h3>
+        <div class="en-name">FORKLIFT 14–17 TON</div>
+        <p>
+          روافع شوكية ثقيلة لرفع ونقل الأحمال الكبيرة في المصانع والمخازن.
+          سائقين مدربين ومعتمدين، إن طلبت.
+        </p>
+        <div class="service-meta">
+          <span class="specs">١٤ — ١٧ طن</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-d1">
+        <div class="service-img">
+          <span class="service-num">٠٥</span>
+          <img src="https://images.unsplash.com/photo-1597844808175-90085afe9b09?auto=format&fit=crop&w=900&q=80" alt="ونش أحمال" onerror="this.src='https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>ونش أحمال</h3>
+        <div class="en-name">MOBILE CRANE</div>
+        <p>
+          أوناش رفع متحركة لرفع المواد والمعدات الثقيلة في المواقع الإنشائية.
+          متوفرة بحمولات وامتدادات متعددة لكل المشاريع.
+        </p>
+        <div class="service-meta">
+          <span class="specs">حمولات متنوعة</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal-d2">
+        <div class="service-img">
+          <span class="service-num">٠٦</span>
+          <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=80" alt="مولد كهرباء" onerror="this.src='https://images.pexels.com/photos/3964341/pexels-photo-3964341.jpeg?auto=compress&w=900'"/>
+        </div>
+        <h3>مولد كهرباء</h3>
+        <div class="en-name">DIESEL GENERATOR</div>
+        <p>
+          مولدات ديزل صناعية بقدرات مختلفة لتغذية المواقع والمعدات. صامتة،
+          موفرة في استهلاك الوقود، ومضمونة.
+        </p>
+        <div class="service-meta">
+          <span class="specs">قدرات متعددة</span>
+          <span class="more">التفاصيل ←</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAN LIFT FEATURE -->
+<section id="manlift">
+  <div class="section-inner">
+    <div class="ml-grid">
+      <div class="ml-visual reveal">
+        <div class="main-img">
+          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80" alt="مان لفت بجميع الأطوال" onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&w=900'"/>
+        </div>
+        <div class="ruler"></div>
+        <div class="height-badge">
+          <div class="big">٤٠م</div>
+          <div class="small">أقصى ارتفاع</div>
+        </div>
+      </div>
+
+      <div class="ml-text reveal reveal-d2">
+        <div class="section-tag">FEATURED · المعدة المميزة</div>
+        <h2>مان لفت ديزل<br/><span class="accent">بجميع الارتفاعات</span></h2>
+        <p>
+          سواء مشروعك بسيط أو ضخم، عندنا المان لفت المناسب ليك. أسطول كامل من
+          الرافعات الشخصية الديزل بأحدث الموديلات، فحص سفتي كامل قبل كل
+          تشغيل، وفنيين متخصصين لكل المتابعة في موقع العمل.
+        </p>
+
+        <div class="heights-grid">
+          <div class="height-pill"><div class="h">١٢م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">١٨م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٢٢م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٢٦م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٣٠م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٣٤م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٣٨م</div><div class="l">METER</div></div>
+          <div class="height-pill"><div class="h">٤٠م</div><div class="l">METER</div></div>
+        </div>
+
+        <div class="ml-features">
+          <div class="ml-feature">
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="txt">
+              صيانة دورية وفحص قبل التشغيل
+              <small>كل معدة بتعدي على فحص شامل قبل توصيلها للموقع</small>
+            </div>
+          </div>
+          <div class="ml-feature">
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="txt">
+              توصيل ونقل لأي محافظة
+              <small>أسطول نقل خاص بنا — تستلم المعدة عند بوابة موقعك</small>
+            </div>
+          </div>
+          <div class="ml-feature">
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="txt">
+              فني تشغيل ومتابعة عند الحاجة
+              <small>كادر فنيين معتمدين لإدارة وتشغيل المعدة في موقعك</small>
+            </div>
+          </div>
+          <div class="ml-feature">
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="txt">
+              عقود إيجار مرنة
+              <small>إيجار باليوم، الأسبوع، أو الشهر — والإلغاء سهل</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <div class="section-tag">WHY EL BARAKA · لماذا نحن</div>
+        <h2>أربع أسباب تخليك <span class="accent">تعتمد علينا</span></h2>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="num">٠١</div>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>سفتي كامل</h4>
+        <p>كل المعدات بتعدي على فحص دوري شامل، وعندنا التزام كامل بمعايير السلامة في موقع العمل.</p>
+      </div>
+
+      <div class="why-card reveal reveal-d1">
+        <div class="num">٠٢</div>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h4>أسعار تنافسية</h4>
+        <p>عروض خاصة للشركات والمقاولين، خصومات على العقود الطويلة، وأسعار خارج المنافسة.</p>
+      </div>
+
+      <div class="why-card reveal reveal-d2">
+        <div class="num">٠٣</div>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>توصيل سريع</h4>
+        <p>المعدة بتوصلك في أقل وقت ممكن. أسطول نقل خاص بنا يغطي جميع محافظات مصر.</p>
+      </div>
+
+      <div class="why-card reveal reveal-d3">
+        <div class="num">٠٤</div>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
+        <h4>دعم على مدار الساعة</h4>
+        <p>فريقنا متاح ٢٤/٧ لأي استفسار أو طوارئ. اتصل، واتس، أو سيب رسالة وهنرد عليك فوراً.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="section-inner">
+    <div class="coverage-grid">
+      <div class="reveal">
+        <div class="section-tag">COVERAGE · التغطية</div>
+        <h2 style="font-family: var(--f-arabic-display); font-size: clamp(32px, 4vw, 52px); font-weight:700; line-height:1.1; margin-bottom:20px;">
+          نخدم كل <span style="color: var(--gold);">محافظات مصر</span>
+        </h2>
+        <p style="color: var(--ink-dim); font-size: 16px; line-height: 1.85; margin-bottom: 36px;">
+          مهما كان موقع مشروعك، عندنا فرع أو شريك توصيل قريب منك. خدماتنا توصل
+          من الإسكندرية شمالاً لأسوان جنوباً، ومن مرسى مطروح غرباً للبحر الأحمر شرقاً.
+        </p>
+
+        <div class="coverage-list">
+          <div class="gov">القاهرة</div>
+          <div class="gov">الجيزة</div>
+          <div class="gov">القليوبية</div>
+          <div class="gov">الإسكندرية</div>
+          <div class="gov">البحيرة</div>
+          <div class="gov">كفر الشيخ</div>
+          <div class="gov">الغربية</div>
+          <div class="gov">المنوفية</div>
+          <div class="gov">الدقهلية</div>
+          <div class="gov">دمياط</div>
+          <div class="gov">الشرقية</div>
+          <div class="gov">بورسعيد</div>
+          <div class="gov">الإسماعيلية</div>
+          <div class="gov">السويس</div>
+          <div class="gov">شمال سيناء</div>
+          <div class="gov">جنوب سيناء</div>
+          <div class="gov">الفيوم</div>
+          <div class="gov">بني سويف</div>
+          <div class="gov">المنيا</div>
+          <div class="gov">أسيوط</div>
+          <div class="gov">سوهاج</div>
+          <div class="gov">قنا</div>
+          <div class="gov">الأقصر</div>
+          <div class="gov">أسوان</div>
+          <div class="gov">البحر الأحمر</div>
+          <div class="gov">الوادي الجديد</div>
+          <div class="gov">مطروح</div>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal reveal-d2">
+        <div class="corner-label">EGYPT MAP</div>
+        <!-- Stylized Egypt map -->
+        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="egyGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e8a838" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#c97a3e" stop-opacity="0.08"/>
+            </linearGradient>
+          </defs>
+          <!-- Simplified Egypt outline -->
+          <path d="M 80 60 L 320 55 L 360 90 L 360 180 L 380 220 L 380 280 L 340 380 L 290 460 L 220 470 L 150 460 L 90 420 L 70 340 L 60 240 L 75 150 Z"
+            fill="url(#egyGrad)"
+            stroke="#e8a838"
+            stroke-width="1.5"
+            stroke-dasharray="4 3"
+            opacity="0.85"/>
+          <!-- Sinai -->
+          <path d="M 320 55 L 380 70 L 370 140 L 340 130 L 320 90 Z"
+            fill="url(#egyGrad)"
+            stroke="#e8a838"
+            stroke-width="1.5"
+            stroke-dasharray="4 3"
+            opacity="0.85"/>
+
+          <!-- Nile river -->
+          <path d="M 200 80 Q 195 200 210 350 Q 220 430 215 460"
+            fill="none" stroke="#5a8db8" stroke-width="2" opacity="0.45" stroke-linecap="round"/>
+
+          <!-- Cities -->
+          <g font-family="Tajawal" font-size="11" fill="#b8b1a0">
+            <circle cx="190" cy="95" r="3" fill="#e8a838"/>
+            <text x="200" y="98" font-size="10">الإسكندرية</text>
+
+            <circle cx="215" cy="135" r="5" fill="#e8a838"/>
+            <text x="225" y="140" fill="#f5c660" font-weight="700">القاهرة</text>
+
+            <circle cx="220" cy="225" r="3" fill="#e8a838"/>
+            <text x="230" y="228" font-size="10">المنيا</text>
+
+            <circle cx="225" cy="305" r="3" fill="#e8a838"/>
+            <text x="235" y="308" font-size="10">الأقصر</text>
+
+            <circle cx="218" cy="395" r="3" fill="#e8a838"/>
+            <text x="228" y="398" font-size="10">أسوان</text>
+
+            <circle cx="290" cy="100" r="3" fill="#e8a838"/>
+            <text x="295" y="93" font-size="10">بورسعيد</text>
+
+            <circle cx="115" cy="115" r="3" fill="#e8a838"/>
+            <text x="50" y="118" font-size="10">مطروح</text>
+
+            <circle cx="320" cy="180" r="3" fill="#e8a838"/>
+            <text x="325" y="183" font-size="10">الغردقة</text>
+          </g>
+
+          <!-- Pulse on Cairo (HQ) -->
+          <circle cx="215" cy="135" r="8" fill="none" stroke="#e8a838" stroke-width="1.5" opacity="0.8">
+            <animate attributeName="r" from="8" to="22" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.8" to="0" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="cta-strip">
+  <div class="cta-strip-inner">
+    <h3>
+      جاهز تبدأ مشروعك؟
+      <small>اتصل بينا دلوقتي وهنوصلك أحسن عرض سعر في أقل من ساعة</small>
+    </h3>
+    <div class="cta-phones">
+      <a href="tel:01023032502" class="cta-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        ٠١٠٢٣٠٣٢٥٠٢
+      </a>
+      <a href="tel:01065469895" class="cta-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        ٠١٠٦٥٤٦٩٨٩٥
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-head reveal" style="margin-bottom: 50px;">
+      <div class="section-head-text">
+        <div class="section-tag">GET IN TOUCH · تواصل معنا</div>
+        <h2>ابعتلنا تفاصيل <span class="accent">مشروعك</span></h2>
+      </div>
+      <p class="sub">
+        املأ النموذج وفريقنا هيتواصل معاك خلال أقل من ساعة بعرض سعر مفصل
+        ومناسب لاحتياجاتك.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+
+        <div class="contact-item">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div>
+            <h4>العنوان</h4>
+            <p>٦ أكتوبر — الحي الثاني عشر<br/>خلف فودافون، أمام بنزينة توتال</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <h4>تواصل معانا الآن</h4>
+            <a href="tel:01023032502">٠١٠٢٣٠٣٢٥٠٢</a><br/>
+            <a href="tel:01065469895">٠١٠٦٥٤٦٩٨٩٥</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012.07 0C5.46 0 .07 5.39.07 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.93 11.93 0 0012.07 24c6.61 0 12-5.39 12-12 0-3.21-1.25-6.22-3.55-8.52zM12.07 21.93c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37a9.93 9.93 0 01-1.53-5.27C1.93 6.55 6.43 2.05 12.07 2.05c2.69 0 5.21 1.05 7.11 2.95a9.96 9.96 0 012.93 7.07c0 5.64-4.5 9.86-10.04 9.86z"/></svg>
+          </div>
+          <div>
+            <h4>واتساب</h4>
+            <a href="https://wa.me/201023032502" target="_blank">ابعتلنا واتس مباشرة</a>
+            <p style="font-size:13px; color:var(--ink-mute); margin-top:4px;">الرد خلال دقائق</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div>
+            <h4>ساعات العمل</h4>
+            <p>السبت — الخميس: ٨ ص — ٨ م<br/>دعم طوارئ ٢٤/٧</p>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="contact-form reveal reveal-d2" onsubmit="return submitForm(event)">
+        <h3>اطلب عرض سعر</h3>
+        <p class="sub">سيتم التواصل معاك خلال أقل من ساعة</p>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>الاسم</label>
+            <input type="text" required placeholder="اسمك بالكامل" />
+          </div>
+          <div class="form-field">
+            <label>رقم الموبايل</label>
+            <input type="tel" required placeholder="٠١xxxxxxxxx" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>نوع المعدة</label>
+            <select required>
+              <option value="">اختر النوع</option>
+              <option>مان لفت ديزل</option>
+              <option>مان لفت كهرباء</option>
+              <option>سيزر لفت</option>
+              <option>فوركليفت</option>
+              <option>ونش أحمال</option>
+              <option>مولد كهرباء</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>المحافظة</label>
+            <input type="text" required placeholder="مثلاً: الجيزة" />
+          </div>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 16px;">
+          <label>تفاصيل المشروع (اختياري)</label>
+          <textarea placeholder="احكيلنا عن طبيعة المشروع، مدة الإيجار، وأي تفاصيل تانية"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">إرسال الطلب →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-wrap">
+          <img src="logo.png" alt="البركة" class="logo-img" style="height: 70px;" />
+          <div class="logo-text">
+            <span class="ar">البركة</span>
+            <span class="en">EL BARAKA</span>
+          </div>
+        </a>
+        <p>
+          شركة البركة لتأجير المعدات الثقيلة — شريكك الموثوق في كل مشاريع
+          الإنشاء والصيانة في جميع محافظات مصر.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+          <a href="https://wa.me/201023032502" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012.07 0C5.46 0 .07 5.39.07 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.93 11.93 0 0012.07 24c6.61 0 12-5.39 12-12 0-3.21-1.25-6.22-3.55-8.52z"/></svg></a>
+          <a href="tel:01023032502" aria-label="اتصال"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>الخدمات</h5>
+        <ul>
+          <li><a href="#services">مان لفت ديزل</a></li>
+          <li><a href="#services">مان لفت كهرباء</a></li>
+          <li><a href="#services">سيزر لفت</a></li>
+          <li><a href="#services">فوركليفت</a></li>
+          <li><a href="#services">ونش أحمال</a></li>
+          <li><a href="#services">مولد كهرباء</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>الشركة</h5>
+        <ul>
+          <li><a href="#why">لماذا نحن</a></li>
+          <li><a href="#coverage">مناطق التغطية</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+          <li><a href="#manlift">المان لفت</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>تواصل</h5>
+        <ul>
+          <li><a href="tel:01023032502">٠١٠٢٣٠٣٢٥٠٢</a></li>
+          <li><a href="tel:01065469895">٠١٠٦٥٤٦٩٨٩٥</a></li>
+          <li><a href="https://wa.me/201023032502">واتساب</a></li>
+          <li style="color: var(--ink-mute); font-size: 13px;">٦ أكتوبر، الحي ١٢</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© ٢٠٢٦ شركة البركة للمعدات الثقيلة — جميع الحقوق محفوظة</div>
+      <div class="made">صُنع في مصر 🇪🇬</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/201023032502" class="wa-float" aria-label="واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012.07 0C5.46 0 .07 5.39.07 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.93 11.93 0 0012.07 24c6.61 0 12-5.39 12-12 0-3.21-1.25-6.22-3.55-8.52zM12.07 21.93c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37a9.93 9.93 0 01-1.53-5.27C1.93 6.55 6.43 2.05 12.07 2.05c2.69 0 5.21 1.05 7.11 2.95a9.96 9.96 0 012.93 7.07c0 5.64-4.5 9.86-10.04 9.86zm5.5-7.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.65-.93-2.25-.25-.6-.5-.5-.68-.5-.18-.02-.38-.02-.58-.02s-.53.07-.8.38c-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.27.5 1.7.65.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(r => io.observe(r));
+
+  // Form submit
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    const original = btn.textContent;
+    btn.textContent = '✓ تم الإرسال — هنتواصل معاك قريب';
+    btn.style.background = '#4caf50';
+    setTimeout(() => {
+      e.target.reset();
+      btn.textContent = original;
+      btn.style.background = '';
+    }, 3500);
+    return false;
+  }
+</script>
+
+</body>
+</html>
