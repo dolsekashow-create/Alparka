@@ -1253,6 +1253,22 @@
     .topbar-left { gap: 14px; }
     .nav-cta span { display: none; }
   }
+
+  /* SVG illustrations */
+  .svg-illustration {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background: var(--bg-3);
+  }
+  .svg-illustration svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
 </style>
 </head>
 <body>
@@ -1353,7 +1369,176 @@
 
     <div class="hero-visual reveal reveal-d2">
       <div class="frame">
-        <img src="https://image.made-in-china.com/202f0j00cVsanQyREIou/CE-Approved-14m-18m-22m-26m-27m-Diesel-Cummins-Engine-Construction-Lift-Boom-Lift.jpg" alt="معدات ثقيلة" onerror="this.src='https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&w=1200'" />
+        <div class="svg-illustration" role="img" aria-label="معدات ثقيلة"><svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="hr_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0e10"/>
+      <stop offset="50%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="hr_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+    <radialGradient id="hr_glow" cx="0.7" cy="0.3">
+      <stop offset="0%" stop-color="#e8a838" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#e8a838" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#hr_sky)"/>
+  <rect width="800" height="800" fill="url(#hr_glow)"/>
+
+  <!-- Sun/Moon glow -->
+  <circle cx="600" cy="200" r="100" fill="#e8a838" opacity="0.08"/>
+  <circle cx="600" cy="200" r="60" fill="#e8a838" opacity="0.12"/>
+  <circle cx="600" cy="200" r="30" fill="#f5c660" opacity="0.3"/>
+
+  <!-- Construction grid background -->
+  <g opacity="0.12" stroke="#e8a838" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <!-- BACKGROUND - Building silhouettes -->
+  <g opacity="0.4">
+    <rect x="0" y="450" width="80" height="200" fill="#b8b1a0" opacity="0.3"/>
+    <rect x="80" y="500" width="100" height="150" fill="#b8b1a0" opacity="0.3"/>
+    <rect x="180" y="430" width="60" height="220" fill="#b8b1a0" opacity="0.3"/>
+    <rect x="240" y="480" width="80" height="170" fill="#b8b1a0" opacity="0.3"/>
+    <rect x="700" y="460" width="100" height="190" fill="#b8b1a0" opacity="0.3"/>
+    <!-- Windows -->
+    <g fill="#f5c660" opacity="0.5">
+      <rect x="20" y="480" width="6" height="8"/>
+      <rect x="40" y="480" width="6" height="8"/>
+      <rect x="60" y="480" width="6" height="8"/>
+      <rect x="20" y="510" width="6" height="8"/>
+      <rect x="40" y="510" width="6" height="8"/>
+      <rect x="200" y="450" width="6" height="8"/>
+      <rect x="220" y="450" width="6" height="8"/>
+      <rect x="200" y="475" width="6" height="8"/>
+      <rect x="200" y="500" width="6" height="8"/>
+    </g>
+  </g>
+
+  <!-- Tower crane silhouette in background -->
+  <g opacity="0.5" stroke="#b3791a" stroke-width="2" fill="none">
+    <line x1="350" y1="700" x2="350" y2="200"/>
+    <line x1="345" y1="700" x2="345" y2="200"/>
+    <line x1="355" y1="700" x2="355" y2="200"/>
+    <!-- Cross supports -->
+    <line x1="345" y1="280" x2="355" y2="290"/>
+    <line x1="355" y1="280" x2="345" y2="290"/>
+    <line x1="345" y1="350" x2="355" y2="360"/>
+    <line x1="355" y1="350" x2="345" y2="360"/>
+    <line x1="345" y1="420" x2="355" y2="430"/>
+    <line x1="355" y1="420" x2="345" y2="430"/>
+    <line x1="345" y1="490" x2="355" y2="500"/>
+    <line x1="355" y1="490" x2="345" y2="500"/>
+    <line x1="345" y1="560" x2="355" y2="570"/>
+    <line x1="355" y1="560" x2="345" y2="570"/>
+    <line x1="345" y1="630" x2="355" y2="640"/>
+    <line x1="355" y1="630" x2="345" y2="640"/>
+    <!-- Horizontal arm -->
+    <line x1="200" y1="200" x2="500" y2="200" stroke-width="3"/>
+    <line x1="200" y1="195" x2="500" y2="195"/>
+    <line x1="200" y1="205" x2="500" y2="205"/>
+    <line x1="220" y1="195" x2="220" y2="205"/>
+    <line x1="260" y1="195" x2="260" y2="205"/>
+    <line x1="300" y1="195" x2="300" y2="205"/>
+    <line x1="380" y1="195" x2="380" y2="205"/>
+    <line x1="420" y1="195" x2="420" y2="205"/>
+    <line x1="460" y1="195" x2="460" y2="205"/>
+    <!-- Counter weights -->
+    <rect x="200" y="195" width="20" height="20" fill="#b3791a" opacity="0.5"/>
+    <!-- Cable down -->
+    <line x1="450" y1="205" x2="450" y2="320" stroke-width="1"/>
+    <rect x="445" y="320" width="10" height="15" fill="#b3791a" opacity="0.5"/>
+  </g>
+
+  <!-- Ground -->
+  <line x1="0" y1="700" x2="800" y2="700" stroke="#e8a838" stroke-width="2" opacity="0.5"/>
+  <!-- Ground texture -->
+  <g opacity="0.3">
+    <line x1="0" y1="720" x2="800" y2="720" stroke="#b3791a" stroke-width="0.5"/>
+    <line x1="0" y1="740" x2="800" y2="740" stroke="#b3791a" stroke-width="0.5"/>
+    <line x1="0" y1="760" x2="800" y2="760" stroke="#b3791a" stroke-width="0.5"/>
+  </g>
+
+  <!-- FOREGROUND - Large diesel boom lift (focal point) -->
+  <g transform="translate(50, 0)">
+    <!-- Wheels -->
+    <circle cx="280" cy="685" r="35" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+    <circle cx="280" cy="685" r="18" fill="#3a3d44"/>
+    <circle cx="280" cy="685" r="8" fill="#1a1a1a"/>
+    <circle cx="430" cy="685" r="35" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+    <circle cx="430" cy="685" r="18" fill="#3a3d44"/>
+    <circle cx="430" cy="685" r="8" fill="#1a1a1a"/>
+
+    <!-- Chassis -->
+    <rect x="220" y="615" width="270" height="70" fill="url(#hr_gold)" stroke="#b3791a" stroke-width="3" rx="5"/>
+    <!-- Hazard stripe -->
+    <pattern id="hr_hz" x="0" y="0" width="24" height="8" patternUnits="userSpaceOnUse">
+      <rect width="12" height="8" fill="#ffcd3c"/>
+      <rect x="12" width="12" height="8" fill="#1a1a1a"/>
+    </pattern>
+    <rect x="220" y="608" width="270" height="8" fill="url(#hr_hz)"/>
+    <!-- Brand -->
+    <rect x="270" y="640" width="170" height="20" fill="#1a1a1a" rx="2"/>
+    <text x="355" y="655" text-anchor="middle" font-family="Bebas Neue" font-size="13" fill="#e8a838">EL BARAKA · البركة</text>
+
+    <!-- Counterweight -->
+    <rect x="200" y="585" width="60" height="35" fill="#3a3d44" stroke="#1a1a1a" stroke-width="2"/>
+
+    <!-- Turret -->
+    <rect x="320" y="580" width="100" height="35" fill="#b3791a" stroke="#1a1a1a" stroke-width="2"/>
+    <circle cx="370" cy="580" r="22" fill="#e8a838" stroke="#1a1a1a" stroke-width="2"/>
+
+    <!-- Boom segments going up dramatically -->
+    <polygon points="370,580 388,562 540,330 522,312" fill="url(#hr_gold)" stroke="#1a1a1a" stroke-width="2"/>
+    <polygon points="528,322 545,305 700,180 685,165" fill="url(#hr_gold)" stroke="#1a1a1a" stroke-width="2" opacity="0.95"/>
+    <!-- Hydraulic -->
+    <line x1="380" y1="580" x2="510" y2="370" stroke="#3a3d44" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Basket at top -->
+    <g transform="translate(700, 165)">
+      <rect x="-30" y="20" width="70" height="8" fill="#b3791a"/>
+      <rect x="-30" y="-20" width="3" height="42" fill="#e8a838"/>
+      <rect x="37" y="-20" width="3" height="42" fill="#e8a838"/>
+      <rect x="-30" y="-20" width="70" height="3" fill="#e8a838"/>
+      <rect x="-30" y="0" width="70" height="2" fill="#e8a838" opacity="0.7"/>
+      <!-- Worker -->
+      <circle cx="5" cy="-10" r="7" fill="#ffcd3c"/>
+      <rect x="0" y="-3" width="10" height="20" fill="#ffcd3c"/>
+    </g>
+  </g>
+
+  <!-- Light beams -->
+  <g opacity="0.15">
+    <polygon points="755,170 770,250 740,260" fill="#f5c660"/>
+    <polygon points="755,170 800,300 720,310" fill="#f5c660"/>
+  </g>
+
+  <!-- Foreground hazard tape -->
+  <g opacity="0.7">
+    <pattern id="hr_hz2" x="0" y="0" width="40" height="14" patternUnits="userSpaceOnUse">
+      <rect width="20" height="14" fill="#ffcd3c"/>
+      <rect x="20" width="20" height="14" fill="#1a1a1a"/>
+    </pattern>
+    <rect x="0" y="780" width="800" height="14" fill="url(#hr_hz2)"/>
+  </g>
+</svg></div>
         <div class="corner-tl"></div>
         <div class="corner-tr"></div>
         <div class="corner-bl"></div>
@@ -1386,7 +1571,127 @@
       <article class="service-card reveal">
         <div class="service-img">
           <span class="service-num">٠١</span>
-          <img src="https://image.made-in-china.com/202f0j00cVsanQyREIou/CE-Approved-14m-18m-22m-26m-27m-Diesel-Cummins-Engine-Construction-Lift-Boom-Lift.jpg" alt="مان لفت ديزل" onerror="this.src='https://5.imimg.com/data5/SELLER/Default/2023/8/335547654/HW/CR/PG/64554/articulating-boom-lift-rental-services-1000x1000.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="مان لفت ديزل"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bl_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="bl_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+    <linearGradient id="bl_arm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="50%" stop-color="#e8a838"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bl_sky)"/>
+  <!-- Construction grid -->
+  <g opacity="0.15" stroke="#e8a838" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+  </g>
+  <!-- Sun/spotlight -->
+  <circle cx="650" cy="100" r="80" fill="#e8a838" opacity="0.08"/>
+  <circle cx="650" cy="100" r="40" fill="#e8a838" opacity="0.12"/>
+
+  <!-- Ground line -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+  <!-- Hazard ground stripes -->
+  <g opacity="0.6">
+    <rect x="0" y="430" width="800" height="6" fill="#ffcd3c" opacity="0.3"/>
+  </g>
+
+  <!-- BOOM LIFT BASE/CHASSIS -->
+  <!-- Wheels -->
+  <circle cx="220" cy="420" r="28" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="220" cy="420" r="14" fill="#3a3d44"/>
+  <circle cx="220" cy="420" r="6" fill="#1a1a1a"/>
+  <circle cx="320" cy="420" r="28" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="320" cy="420" r="14" fill="#3a3d44"/>
+  <circle cx="320" cy="420" r="6" fill="#1a1a1a"/>
+
+  <!-- Chassis body -->
+  <rect x="180" y="370" width="180" height="55" fill="url(#bl_gold)" stroke="#b3791a" stroke-width="2" rx="4"/>
+  <!-- Chassis details -->
+  <rect x="195" y="380" width="40" height="20" fill="#15171b" rx="2"/>
+  <rect x="245" y="380" width="30" height="20" fill="#15171b" rx="2"/>
+  <rect x="285" y="380" width="60" height="20" fill="#15171b" opacity="0.6" rx="2"/>
+  <!-- Counterweight -->
+  <rect x="170" y="350" width="50" height="30" fill="#3a3d44" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="195" y="370" text-anchor="middle" font-family="Bebas Neue" font-size="12" fill="#e8a838">EL BARAKA</text>
+
+  <!-- Turret/rotation point -->
+  <rect x="240" y="345" width="80" height="30" fill="#b3791a" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="280" cy="345" r="18" fill="#e8a838" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- TELESCOPIC BOOM ARMS (3 sections, extended) -->
+  <!-- Lower arm -->
+  <polygon points="280,345 295,330 460,180 445,165" fill="url(#bl_arm)" stroke="#1a1a1a" stroke-width="1.5"/>
+  <!-- Mid arm (telescoped) -->
+  <polygon points="450,175 462,162 600,90 590,77" fill="url(#bl_arm)" stroke="#1a1a1a" stroke-width="1.5" opacity="0.95"/>
+  <!-- Upper arm -->
+  <polygon points="595,85 605,75 690,45 682,35" fill="url(#bl_arm)" stroke="#1a1a1a" stroke-width="1.5" opacity="0.9"/>
+  <!-- Hydraulic cylinder -->
+  <line x1="290" y1="345" x2="430" y2="200" stroke="#3a3d44" stroke-width="6" stroke-linecap="round"/>
+  <line x1="295" y1="345" x2="425" y2="205" stroke="#b8b1a0" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- BASKET / Platform at the top -->
+  <g transform="translate(680, 30)">
+    <!-- Platform floor -->
+    <rect x="-25" y="20" width="60" height="6" fill="#b3791a"/>
+    <!-- Railings -->
+    <rect x="-25" y="-15" width="3" height="38" fill="#e8a838"/>
+    <rect x="32" y="-15" width="3" height="38" fill="#e8a838"/>
+    <rect x="-25" y="-15" width="60" height="3" fill="#e8a838"/>
+    <rect x="-25" y="0" width="60" height="2" fill="#e8a838" opacity="0.7"/>
+    <!-- Worker silhouette -->
+    <circle cx="5" cy="-5" r="5" fill="#ffcd3c"/>
+    <rect x="2" y="0" width="6" height="14" fill="#ffcd3c"/>
+  </g>
+
+  <!-- Hazard stripe on chassis -->
+  <g>
+    <rect x="180" y="365" width="180" height="6" fill="#ffcd3c"/>
+    <pattern id="hz1" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+      <rect width="10" height="6" fill="#ffcd3c"/>
+      <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+    </pattern>
+    <rect x="180" y="365" width="180" height="6" fill="url(#hz1)"/>
+  </g>
+
+  <!-- Brand badge on machine -->
+  <rect x="195" y="395" width="50" height="14" fill="#1a1a1a" rx="2"/>
+  <text x="220" y="406" text-anchor="middle" font-family="Bebas Neue" font-size="10" fill="#e8a838">DIESEL</text>
+
+  <!-- Height markers / measurement scale on right -->
+  <g opacity="0.5">
+    <line x1="750" y1="50" x2="750" y2="430" stroke="#e8a838" stroke-width="1" stroke-dasharray="4 4"/>
+    <g font-family="Bebas Neue" font-size="11" fill="#e8a838">
+      <text x="760" y="55">40M</text>
+      <text x="760" y="145">30M</text>
+      <text x="760" y="240">20M</text>
+      <text x="760" y="335">10M</text>
+      <text x="760" y="430">0</text>
+    </g>
+    <line x1="745" y1="50" x2="755" y2="50" stroke="#e8a838" stroke-width="1.5"/>
+    <line x1="745" y1="145" x2="755" y2="145" stroke="#e8a838" stroke-width="1.5"/>
+    <line x1="745" y1="240" x2="755" y2="240" stroke="#e8a838" stroke-width="1.5"/>
+    <line x1="745" y1="335" x2="755" y2="335" stroke="#e8a838" stroke-width="1.5"/>
+  </g>
+</svg></div>
         </div>
         <h3>مان لفت ديزل</h3>
         <div class="en-name">DIESEL MAN LIFT</div>
@@ -1403,7 +1708,109 @@
       <article class="service-card reveal reveal-d1">
         <div class="service-img">
           <span class="service-num">٠٢</span>
-          <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/335547654/HW/CR/PG/64554/articulating-boom-lift-rental-services-1000x1000.jpg" alt="مان لفت كهرباء" onerror="this.src='https://image.made-in-china.com/2f0j00mWhUavokmcrl/16m-Electric-Articulating-Aerial-Self-Propelled-Boom-Lift-Platform.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="مان لفت كهرباء"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="el_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="el_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#el_sky)"/>
+
+  <!-- Indoor warehouse vibe - ceiling lines -->
+  <g opacity="0.2" stroke="#e8a838" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <path d="M 100 50 L 150 80 M 250 50 L 300 80 M 400 50 L 450 80 M 550 50 L 600 80 M 700 50 L 750 80" stroke="#e8a838" stroke-width="0.8"/>
+  </g>
+  <!-- Light fixtures -->
+  <g opacity="0.4">
+    <circle cx="200" cy="80" r="6" fill="#f5c660"/>
+    <circle cx="200" cy="80" r="20" fill="#f5c660" opacity="0.2"/>
+    <circle cx="500" cy="80" r="6" fill="#f5c660"/>
+    <circle cx="500" cy="80" r="20" fill="#f5c660" opacity="0.2"/>
+  </g>
+
+  <!-- Floor -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+  <g opacity="0.15">
+    <line x1="0" y1="445" x2="800" y2="445" stroke="#b8b1a0" stroke-width="1"/>
+    <line x1="0" y1="460" x2="800" y2="460" stroke="#b8b1a0" stroke-width="1"/>
+    <line x1="0" y1="475" x2="800" y2="475" stroke="#b8b1a0" stroke-width="1"/>
+  </g>
+
+  <!-- BASE -->
+  <!-- Wheels (smaller, electric style) -->
+  <circle cx="280" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="280" cy="420" r="10" fill="#3a3d44"/>
+  <circle cx="380" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="380" cy="420" r="10" fill="#3a3d44"/>
+
+  <!-- Compact base -->
+  <rect x="240" y="385" width="180" height="40" fill="url(#el_gold)" stroke="#b3791a" stroke-width="2" rx="3"/>
+  <!-- Battery indicator -->
+  <rect x="255" y="395" width="40" height="20" fill="#1a1a1a" rx="2"/>
+  <rect x="258" y="398" width="34" height="14" fill="#ffcd3c" rx="1"/>
+  <text x="275" y="409" text-anchor="middle" font-family="Bebas Neue" font-size="10" fill="#1a1a1a">100%</text>
+  <!-- Control panel -->
+  <rect x="305" y="395" width="100" height="20" fill="#15171b" rx="2"/>
+  <circle cx="320" cy="405" r="3" fill="#ffcd3c"/>
+  <circle cx="335" cy="405" r="3" fill="#e8a838"/>
+  <circle cx="350" cy="405" r="3" fill="#f5c660" opacity="0.5"/>
+  <text x="385" y="409" text-anchor="middle" font-family="Bebas Neue" font-size="9" fill="#e8a838">ELECTRIC</text>
+
+  <!-- ARTICULATING ARMS (zigzag pattern - 3 segments) -->
+  <!-- Lower vertical riser -->
+  <rect x="325" y="320" width="20" height="65" fill="url(#el_gold)" stroke="#1a1a1a" stroke-width="1.5"/>
+  <!-- First segment going up-right -->
+  <polygon points="325,330 345,330 480,200 460,200" fill="url(#el_gold)" stroke="#1a1a1a" stroke-width="1.5"/>
+  <!-- Joint 1 -->
+  <circle cx="470" cy="200" r="14" fill="#b3791a" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="470" cy="200" r="6" fill="#1a1a1a"/>
+  <!-- Second segment going up-left (articulated) -->
+  <polygon points="478,193 462,207 380,130 396,116" fill="url(#el_gold)" stroke="#1a1a1a" stroke-width="1.5"/>
+  <!-- Joint 2 -->
+  <circle cx="388" cy="123" r="13" fill="#b3791a" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="388" cy="123" r="5" fill="#1a1a1a"/>
+  <!-- Third segment going up-right to platform -->
+  <polygon points="395,116 381,130 540,90 555,103" fill="url(#el_gold)" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- BASKET / Platform -->
+  <g transform="translate(560, 70)">
+    <!-- Floor -->
+    <rect x="-30" y="25" width="70" height="8" fill="#b3791a"/>
+    <!-- Railings -->
+    <rect x="-30" y="-18" width="3" height="46" fill="#e8a838"/>
+    <rect x="37" y="-18" width="3" height="46" fill="#e8a838"/>
+    <rect x="-30" y="-18" width="70" height="3" fill="#e8a838"/>
+    <rect x="-30" y="0" width="70" height="2" fill="#e8a838" opacity="0.7"/>
+    <!-- Worker -->
+    <circle cx="5" cy="-8" r="6" fill="#ffcd3c"/>
+    <rect x="2" y="-2" width="7" height="18" fill="#ffcd3c"/>
+  </g>
+
+  <!-- Lightning bolt indicator (electric) -->
+  <g transform="translate(140, 200)" opacity="0.7">
+    <polygon points="0,0 -8,20 -2,20 -8,40 8,15 2,15 8,0" fill="#e8a838" stroke="#f5c660" stroke-width="1"/>
+  </g>
+  <!-- "QUIET" label -->
+  <g transform="translate(120, 280)">
+    <rect x="-30" y="-12" width="70" height="22" fill="#1a1a1a" stroke="#e8a838" stroke-width="1" rx="2"/>
+    <text x="5" y="3" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#e8a838">SILENT</text>
+    <text x="5" y="16" text-anchor="middle" font-family="Bebas Neue" font-size="9" fill="#b8b1a0">صامت</text>
+  </g>
+
+  <!-- Hazard stripe on base -->
+  <pattern id="hz2" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+    <rect width="10" height="6" fill="#ffcd3c"/>
+    <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="240" y="380" width="180" height="6" fill="url(#hz2)"/>
+</svg></div>
         </div>
         <h3>مان لفت كهرباء</h3>
         <div class="en-name">ELECTRIC MAN LIFT</div>
@@ -1420,7 +1827,129 @@
       <article class="service-card reveal reveal-d2">
         <div class="service-img">
           <span class="service-num">٠٣</span>
-          <img src="https://www.unitedequipment.com.au/wp-content/uploads/2020/05/Haulotte-Compact-8W-Scissor-Lift-Hire.jpg" alt="سيزر لفت" onerror="this.src='https://www.skyriderequipment.com/wp-content/uploads/2020/06/JLG-4069LE-Scissor-Lift-1-1024x683.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="سيزر لفت"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sc_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="sc_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sc_sky)"/>
+
+  <!-- Warehouse interior atmosphere -->
+  <g opacity="0.2" stroke="#e8a838" stroke-width="0.6">
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="100" y1="0" x2="100" y2="430"/>
+    <line x1="700" y1="0" x2="700" y2="430"/>
+  </g>
+
+  <!-- Background shelves hint -->
+  <g opacity="0.15" fill="#b8b1a0">
+    <rect x="50" y="200" width="120" height="230"/>
+    <rect x="630" y="200" width="120" height="230"/>
+    <line x1="50" y1="270" x2="170" y2="270" stroke="#b8b1a0" stroke-width="1"/>
+    <line x1="50" y1="340" x2="170" y2="340" stroke="#b8b1a0" stroke-width="1"/>
+    <line x1="630" y1="270" x2="750" y2="270" stroke="#b8b1a0" stroke-width="1"/>
+    <line x1="630" y1="340" x2="750" y2="340" stroke="#b8b1a0" stroke-width="1"/>
+  </g>
+
+  <!-- Floor -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+
+  <!-- BASE / wheels -->
+  <circle cx="320" cy="420" r="20" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="320" cy="420" r="9" fill="#3a3d44"/>
+  <circle cx="480" cy="420" r="20" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+  <circle cx="480" cy="420" r="9" fill="#3a3d44"/>
+
+  <!-- Base chassis -->
+  <rect x="280" y="385" width="240" height="35" fill="url(#sc_gold)" stroke="#b3791a" stroke-width="2" rx="3"/>
+  <!-- Hazard stripe -->
+  <pattern id="hz3" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+    <rect width="10" height="6" fill="#ffcd3c"/>
+    <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="280" y="380" width="240" height="6" fill="url(#hz3)"/>
+  <!-- Branding on base -->
+  <rect x="350" y="395" width="100" height="18" fill="#1a1a1a" rx="2"/>
+  <text x="400" y="408" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#e8a838">EL BARAKA</text>
+
+  <!-- SCISSOR MECHANISM (3 X-pairs stacked) -->
+  <g stroke="#1a1a1a" stroke-width="2">
+    <!-- Bottom X -->
+    <line x1="310" y1="380" x2="490" y2="320" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <line x1="490" y1="380" x2="310" y2="320" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <!-- Pivot dots -->
+    <circle cx="400" cy="350" r="5" fill="#1a1a1a"/>
+
+    <!-- Middle X -->
+    <line x1="310" y1="320" x2="490" y2="260" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <line x1="490" y1="320" x2="310" y2="260" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="400" cy="290" r="5" fill="#1a1a1a"/>
+
+    <!-- Top X -->
+    <line x1="310" y1="260" x2="490" y2="200" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <line x1="490" y1="260" x2="310" y2="200" stroke="url(#sc_gold)" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="400" cy="230" r="5" fill="#1a1a1a"/>
+
+    <!-- End pivots -->
+    <circle cx="310" cy="380" r="4" fill="#1a1a1a"/>
+    <circle cx="490" cy="380" r="4" fill="#1a1a1a"/>
+    <circle cx="310" cy="320" r="4" fill="#1a1a1a"/>
+    <circle cx="490" cy="320" r="4" fill="#1a1a1a"/>
+    <circle cx="310" cy="260" r="4" fill="#1a1a1a"/>
+    <circle cx="490" cy="260" r="4" fill="#1a1a1a"/>
+    <circle cx="310" cy="200" r="4" fill="#1a1a1a"/>
+    <circle cx="490" cy="200" r="4" fill="#1a1a1a"/>
+  </g>
+
+  <!-- PLATFORM at top -->
+  <rect x="260" y="170" width="280" height="35" fill="url(#sc_gold)" stroke="#b3791a" stroke-width="2" rx="2"/>
+  <!-- Platform top surface -->
+  <rect x="260" y="170" width="280" height="6" fill="#f5c660"/>
+
+  <!-- RAILINGS on platform -->
+  <g stroke="#e8a838" stroke-width="3" fill="none">
+    <!-- Vertical posts -->
+    <line x1="270" y1="170" x2="270" y2="120"/>
+    <line x1="350" y1="170" x2="350" y2="120"/>
+    <line x1="450" y1="170" x2="450" y2="120"/>
+    <line x1="530" y1="170" x2="530" y2="120"/>
+    <!-- Top rail -->
+    <line x1="265" y1="120" x2="535" y2="120"/>
+    <!-- Mid rail -->
+    <line x1="265" y1="145" x2="535" y2="145" opacity="0.7"/>
+  </g>
+
+  <!-- Workers on platform -->
+  <g>
+    <circle cx="320" cy="155" r="6" fill="#ffcd3c"/>
+    <rect x="316" y="160" width="8" height="14" fill="#ffcd3c"/>
+
+    <circle cx="430" cy="155" r="6" fill="#ffcd3c"/>
+    <rect x="426" y="160" width="8" height="14" fill="#ffcd3c"/>
+  </g>
+
+  <!-- Tools on platform -->
+  <rect x="370" y="167" width="20" height="6" fill="#1a1a1a"/>
+  <rect x="395" y="165" width="8" height="8" fill="#c97a3e"/>
+
+  <!-- Side guards on platform -->
+  <rect x="260" y="170" width="6" height="35" fill="#b3791a"/>
+  <rect x="534" y="170" width="6" height="35" fill="#b3791a"/>
+
+  <!-- "ELECTRIC" badge -->
+  <g transform="translate(150, 280)">
+    <rect x="-35" y="-15" width="70" height="28" fill="#1a1a1a" stroke="#e8a838" stroke-width="1" rx="3"/>
+    <polygon points="-20,-8 -25,3 -20,3 -23,12 -10,0 -15,0 -10,-8" fill="#e8a838"/>
+    <text x="10" y="6" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#e8a838">ELECTRIC</text>
+  </g>
+</svg></div>
         </div>
         <h3>سيزر لفت كهرباء</h3>
         <div class="en-name">SCISSOR LIFT</div>
@@ -1437,7 +1966,137 @@
       <article class="service-card reveal">
         <div class="service-img">
           <span class="service-num">٠٤</span>
-          <img src="https://www.uniktruck.com/wp-content/uploads/2023/01/Hyster-52-ton-heavy-duty-forklift-delivered-to-Spain-1.jpg" alt="فوركليفت" onerror="this.src='https://www.toyotaforklift.com/-/media/feature/products/icebox/icebox.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="فوركليفت"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="fk_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="fk_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+    <linearGradient id="fk_window" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5a8db8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f5f1e8" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#fk_sky)"/>
+
+  <!-- Warehouse atmosphere -->
+  <g opacity="0.18" stroke="#e8a838" stroke-width="0.6">
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+  </g>
+
+  <!-- Background pallets stacked -->
+  <g opacity="0.4">
+    <rect x="30" y="320" width="100" height="20" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1"/>
+    <rect x="30" y="345" width="100" height="20" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1"/>
+    <rect x="30" y="370" width="100" height="20" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1"/>
+    <rect x="30" y="395" width="100" height="35" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="50" y1="320" x2="50" y2="430" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="80" y1="320" x2="80" y2="430" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="110" y1="320" x2="110" y2="430" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- Floor -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+
+  <!-- LARGE WHEELS (heavy duty 14-17 ton) -->
+  <circle cx="370" cy="410" r="35" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+  <circle cx="370" cy="410" r="20" fill="#3a3d44"/>
+  <circle cx="370" cy="410" r="8" fill="#1a1a1a"/>
+  <!-- Tire treads -->
+  <g opacity="0.5">
+    <line x1="370" y1="375" x2="370" y2="385" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="405" y1="410" x2="395" y2="410" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="370" y1="445" x2="370" y2="435" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="335" y1="410" x2="345" y2="410" stroke="#b8b1a0" stroke-width="2"/>
+  </g>
+
+  <circle cx="540" cy="415" r="28" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+  <circle cx="540" cy="415" r="15" fill="#3a3d44"/>
+  <circle cx="540" cy="415" r="6" fill="#1a1a1a"/>
+
+  <!-- BODY / Counterweight (rear) -->
+  <path d="M 480 280 L 580 280 L 590 350 L 590 400 L 480 400 Z" fill="url(#fk_gold)" stroke="#b3791a" stroke-width="2"/>
+  <!-- Engine hood lines -->
+  <line x1="490" y1="295" x2="580" y2="295" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="490" y1="310" x2="580" y2="310" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
+  <!-- Exhaust -->
+  <rect x="555" y="260" width="8" height="25" fill="#1a1a1a"/>
+  <circle cx="559" cy="260" r="5" fill="#3a3d44"/>
+
+  <!-- CABIN / Driver area -->
+  <g>
+    <!-- Roof -->
+    <rect x="350" y="220" width="160" height="8" fill="#b3791a"/>
+    <!-- Cab posts -->
+    <rect x="350" y="220" width="8" height="80" fill="#b3791a"/>
+    <rect x="502" y="220" width="8" height="80" fill="#b3791a"/>
+    <!-- Window -->
+    <polygon points="358,228 502,228 502,300 358,300" fill="url(#fk_window)" stroke="#b3791a" stroke-width="1.5"/>
+    <!-- Driver silhouette -->
+    <circle cx="430" cy="265" r="10" fill="#ffcd3c" opacity="0.9"/>
+    <rect x="421" y="270" width="18" height="22" fill="#ffcd3c" opacity="0.9"/>
+    <!-- Steering wheel hint -->
+    <circle cx="450" cy="285" r="6" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+
+  <!-- LOWER CHASSIS -->
+  <rect x="310" y="370" width="220" height="40" fill="url(#fk_gold)" stroke="#b3791a" stroke-width="2"/>
+
+  <!-- MAST (forks vertical assembly) -->
+  <g>
+    <!-- Mast rails (double mast) -->
+    <rect x="280" y="180" width="10" height="200" fill="#b3791a" stroke="#1a1a1a" stroke-width="1"/>
+    <rect x="295" y="180" width="10" height="200" fill="#b3791a" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- Top crossbar -->
+    <rect x="278" y="180" width="30" height="10" fill="#e8a838" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- Hydraulic chains -->
+    <line x1="285" y1="190" x2="285" y2="320" stroke="#3a3d44" stroke-width="2" opacity="0.8"/>
+    <line x1="300" y1="190" x2="300" y2="320" stroke="#3a3d44" stroke-width="2" opacity="0.8"/>
+    <!-- Carriage -->
+    <rect x="270" y="305" width="50" height="18" fill="#b3791a" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+
+  <!-- FORKS (the prongs!) -->
+  <polygon points="270,323 270,335 130,335 130,330 250,325 250,323" fill="#3a3d44" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="270,355 270,367 130,367 130,362 250,357 250,355" fill="#3a3d44" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- LOAD - cargo box on forks -->
+  <g>
+    <rect x="135" y="280" width="120" height="55" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="155" y1="280" x2="155" y2="335" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
+    <line x1="195" y1="280" x2="195" y2="335" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
+    <line x1="235" y1="280" x2="235" y2="335" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
+    <text x="195" y="312" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#e8a838">CARGO</text>
+    <!-- Pallet under cargo -->
+    <rect x="130" y="335" width="130" height="15" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1" opacity="0.7"/>
+    <rect x="135" y="335" width="6" height="15" fill="#1a1a1a" opacity="0.5"/>
+    <rect x="190" y="335" width="6" height="15" fill="#1a1a1a" opacity="0.5"/>
+    <rect x="245" y="335" width="6" height="15" fill="#1a1a1a" opacity="0.5"/>
+  </g>
+
+  <!-- Hazard stripe on counterweight -->
+  <pattern id="hz4" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+    <rect width="10" height="6" fill="#ffcd3c"/>
+    <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="480" y="395" width="110" height="6" fill="url(#hz4)"/>
+
+  <!-- Tonnage badge -->
+  <g transform="translate(670, 200)">
+    <circle cx="0" cy="0" r="50" fill="#1a1a1a" stroke="#e8a838" stroke-width="3"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Bebas Neue" font-size="22" fill="#e8a838">14-17</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#f5c660">TON</text>
+  </g>
+
+  <!-- Headlights -->
+  <circle cx="490" cy="335" r="6" fill="#f5c660" opacity="0.9"/>
+  <circle cx="490" cy="335" r="12" fill="#f5c660" opacity="0.2"/>
+</svg></div>
         </div>
         <h3>فوركليفت ١٤ — ١٧ طن</h3>
         <div class="en-name">FORKLIFT 14–17 TON</div>
@@ -1454,7 +2113,146 @@
       <article class="service-card reveal reveal-d1">
         <div class="service-img">
           <span class="service-num">٠٥</span>
-          <img src="https://wallpapers.com/images/featured/yellow-mobile-crane-truck-bopjnzm6r0fz9d92.jpg" alt="ونش أحمال" onerror="this.src='https://thumbs.dreamstime.com/b/crane-truck-27130129.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="ونش أحمال"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cr_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="cr_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+    <linearGradient id="cr_window" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5a8db8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f5f1e8" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#cr_sky)"/>
+
+  <!-- Construction site silhouette -->
+  <g opacity="0.18">
+    <rect x="50" y="200" width="40" height="230" fill="#b8b1a0"/>
+    <rect x="100" y="240" width="60" height="190" fill="#b8b1a0"/>
+    <rect x="170" y="180" width="35" height="250" fill="#b8b1a0"/>
+    <!-- Building windows -->
+    <g fill="#f5c660" opacity="0.4">
+      <rect x="58" y="220" width="6" height="8"/>
+      <rect x="72" y="220" width="6" height="8"/>
+      <rect x="58" y="240" width="6" height="8"/>
+      <rect x="72" y="240" width="6" height="8"/>
+      <rect x="110" y="260" width="8" height="10"/>
+      <rect x="130" y="260" width="8" height="10"/>
+      <rect x="180" y="200" width="8" height="10"/>
+      <rect x="180" y="220" width="8" height="10"/>
+    </g>
+  </g>
+
+  <!-- Ground -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+
+  <!-- TRUCK CHASSIS -->
+  <!-- Multiple wheels (heavy crane truck) -->
+  <g>
+    <circle cx="180" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+    <circle cx="180" cy="420" r="10" fill="#3a3d44"/>
+
+    <circle cx="240" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+    <circle cx="240" cy="420" r="10" fill="#3a3d44"/>
+
+    <circle cx="380" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+    <circle cx="380" cy="420" r="10" fill="#3a3d44"/>
+
+    <circle cx="440" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+    <circle cx="440" cy="420" r="10" fill="#3a3d44"/>
+
+    <circle cx="500" cy="420" r="22" fill="#1a1a1a" stroke="#3a3d44" stroke-width="2"/>
+    <circle cx="500" cy="420" r="10" fill="#3a3d44"/>
+  </g>
+
+  <!-- Truck bed/chassis -->
+  <rect x="150" y="370" width="400" height="40" fill="url(#cr_gold)" stroke="#b3791a" stroke-width="2"/>
+
+  <!-- TRUCK CAB (driver cabin) -->
+  <g>
+    <path d="M 150 370 L 150 320 L 175 305 L 220 305 L 220 370 Z" fill="url(#cr_gold)" stroke="#b3791a" stroke-width="2"/>
+    <!-- Window -->
+    <polygon points="158,320 175,310 218,310 218,340 158,340" fill="url(#cr_window)" stroke="#b3791a" stroke-width="1.5"/>
+    <!-- Door line -->
+    <line x1="190" y1="340" x2="190" y2="370" stroke="#1a1a1a" stroke-width="1.5"/>
+    <circle cx="200" cy="355" r="2" fill="#1a1a1a"/>
+    <!-- Headlight -->
+    <rect x="148" y="345" width="6" height="10" fill="#f5c660"/>
+  </g>
+
+  <!-- OUTRIGGERS (stabilizers) -->
+  <g stroke="#1a1a1a" stroke-width="1.5">
+    <rect x="260" y="395" width="40" height="8" fill="#3a3d44"/>
+    <rect x="290" y="403" width="12" height="25" fill="#3a3d44"/>
+    <rect x="285" y="425" width="22" height="6" fill="#b3791a"/>
+
+    <rect x="540" y="395" width="40" height="8" fill="#3a3d44"/>
+    <rect x="540" y="403" width="12" height="25" fill="#3a3d44"/>
+    <rect x="535" y="425" width="22" height="6" fill="#b3791a"/>
+  </g>
+
+  <!-- TURNTABLE / Slewing platform -->
+  <rect x="320" y="335" width="180" height="40" fill="#b3791a" stroke="#1a1a1a" stroke-width="2"/>
+  <ellipse cx="410" cy="335" rx="90" ry="8" fill="#e8a838" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- OPERATOR CABIN on turntable -->
+  <g>
+    <rect x="340" y="280" width="60" height="55" fill="url(#cr_gold)" stroke="#b3791a" stroke-width="2"/>
+    <polygon points="345,290 395,290 395,325 345,325" fill="url(#cr_window)" stroke="#b3791a" stroke-width="1"/>
+    <!-- Operator -->
+    <circle cx="370" cy="305" r="5" fill="#ffcd3c"/>
+  </g>
+
+  <!-- BOOM (extended at angle) -->
+  <g>
+    <!-- Boom base section -->
+    <polygon points="395,330 415,310 580,160 565,140" fill="url(#cr_gold)" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Mid section (telescoped) -->
+    <polygon points="572,150 583,138 700,90 690,77" fill="url(#cr_gold)" stroke="#1a1a1a" stroke-width="1.5" opacity="0.95"/>
+    <!-- Tip section -->
+    <polygon points="695,82 703,75 760,55 753,48" fill="url(#cr_gold)" stroke="#1a1a1a" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- Lattice details on boom -->
+    <line x1="430" y1="290" x2="555" y2="155" stroke="#1a1a1a" stroke-width="0.8" opacity="0.7"/>
+    <line x1="450" y1="270" x2="540" y2="170" stroke="#1a1a1a" stroke-width="0.8" opacity="0.7"/>
+
+    <!-- Hydraulic cylinder -->
+    <line x1="410" y1="335" x2="490" y2="240" stroke="#3a3d44" stroke-width="6" stroke-linecap="round"/>
+    <line x1="412" y1="335" x2="488" y2="242" stroke="#b8b1a0" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- HOOK and CABLE -->
+  <line x1="755" y1="50" x2="755" y2="200" stroke="#3a3d44" stroke-width="2"/>
+  <line x1="755" y1="50" x2="755" y2="200" stroke="#b8b1a0" stroke-width="0.5"/>
+  <!-- Pulley block -->
+  <rect x="745" y="200" width="20" height="20" fill="#3a3d44" stroke="#1a1a1a" stroke-width="1.5" rx="2"/>
+  <!-- Hook -->
+  <path d="M 755 220 L 755 240 Q 755 250 745 250 Q 735 250 735 240" fill="none" stroke="#3a3d44" stroke-width="3"/>
+
+  <!-- Load being lifted -->
+  <g transform="translate(720, 250)">
+    <rect x="0" y="0" width="60" height="40" fill="#c97a3e" stroke="#1a1a1a" stroke-width="1.5"/>
+    <text x="30" y="25" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="#e8a838">LOAD</text>
+    <!-- Sling lines -->
+    <line x1="35" y1="0" x2="20" y2="-12" stroke="#3a3d44" stroke-width="1.5"/>
+    <line x1="35" y1="0" x2="50" y2="-12" stroke="#3a3d44" stroke-width="1.5"/>
+  </g>
+
+  <!-- Hazard stripe -->
+  <pattern id="hz5" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+    <rect width="10" height="6" fill="#ffcd3c"/>
+    <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="150" y="365" width="400" height="6" fill="url(#hz5)"/>
+
+  <!-- Brand on chassis -->
+  <text x="350" y="395" font-family="Bebas Neue" font-size="14" fill="#1a1a1a" font-weight="bold">EL BARAKA · CRANE</text>
+</svg></div>
         </div>
         <h3>ونش أحمال</h3>
         <div class="en-name">MOBILE CRANE</div>
@@ -1471,7 +2269,130 @@
       <article class="service-card reveal reveal-d2">
         <div class="service-img">
           <span class="service-num">٠٦</span>
-          <img src="https://taymachinery.com/wp-content/uploads/2021/05/industrial-diesel-generator.jpg" alt="مولد كهرباء" onerror="this.src='https://image.made-in-china.com/2f0j00WAERYcfOiFkz/XCMG-Official-Industrial-Diesel-Power-Generator-600KVA-50HZ-Diesel-Generator.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="مولد كهرباء"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gn_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15171b"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="gn_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+    <linearGradient id="gn_panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a838"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gn_sky)"/>
+
+  <!-- Power lines / electrical motif background -->
+  <g opacity="0.15" stroke="#e8a838" stroke-width="0.6">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="130" x2="800" y2="130"/>
+    <!-- Lightning bolts in BG -->
+  </g>
+  <g opacity="0.1" fill="#e8a838">
+    <polygon points="100,80 90,110 96,110 88,140 110,100 102,100 110,80"/>
+    <polygon points="700,90 690,120 696,120 688,150 710,110 702,110 710,90"/>
+  </g>
+
+  <!-- Ground -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+
+  <!-- GENERATOR ENCLOSURE (the big box) -->
+  <!-- Main body -->
+  <rect x="180" y="200" width="440" height="220" fill="url(#gn_gold)" stroke="#b3791a" stroke-width="3" rx="4"/>
+
+  <!-- Roof / top -->
+  <rect x="170" y="190" width="460" height="20" fill="#b3791a" stroke="#1a1a1a" stroke-width="2" rx="3"/>
+  <line x1="170" y1="200" x2="630" y2="200" stroke="#f5c660" stroke-width="1" opacity="0.8"/>
+
+  <!-- Side panel ribbing/ventilation grilles -->
+  <g stroke="#1a1a1a" stroke-width="1.5" opacity="0.8">
+    <!-- Left ventilation grille -->
+    <rect x="200" y="225" width="80" height="100" fill="#15171b" rx="2"/>
+    <line x1="205" y1="240" x2="275" y2="240" stroke="#b3791a" stroke-width="2"/>
+    <line x1="205" y1="255" x2="275" y2="255" stroke="#b3791a" stroke-width="2"/>
+    <line x1="205" y1="270" x2="275" y2="270" stroke="#b3791a" stroke-width="2"/>
+    <line x1="205" y1="285" x2="275" y2="285" stroke="#b3791a" stroke-width="2"/>
+    <line x1="205" y1="300" x2="275" y2="300" stroke="#b3791a" stroke-width="2"/>
+    <line x1="205" y1="315" x2="275" y2="315" stroke="#b3791a" stroke-width="2"/>
+
+    <!-- Right ventilation grille -->
+    <rect x="520" y="225" width="80" height="100" fill="#15171b" rx="2"/>
+    <line x1="525" y1="240" x2="595" y2="240" stroke="#b3791a" stroke-width="2"/>
+    <line x1="525" y1="255" x2="595" y2="255" stroke="#b3791a" stroke-width="2"/>
+    <line x1="525" y1="270" x2="595" y2="270" stroke="#b3791a" stroke-width="2"/>
+    <line x1="525" y1="285" x2="595" y2="285" stroke="#b3791a" stroke-width="2"/>
+    <line x1="525" y1="300" x2="595" y2="300" stroke="#b3791a" stroke-width="2"/>
+    <line x1="525" y1="315" x2="595" y2="315" stroke="#b3791a" stroke-width="2"/>
+  </g>
+
+  <!-- CONTROL PANEL (center) -->
+  <g>
+    <rect x="320" y="225" width="160" height="110" fill="#1a1a1a" stroke="#e8a838" stroke-width="2" rx="3"/>
+    <!-- Display screen -->
+    <rect x="335" y="240" width="130" height="35" fill="#15171b" stroke="#b3791a" stroke-width="1" rx="2"/>
+    <text x="400" y="260" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#f5c660">600 KVA</text>
+    <text x="400" y="270" text-anchor="middle" font-family="Bebas Neue" font-size="9" fill="#e8a838">DIESEL · 50HZ</text>
+
+    <!-- Indicator lights -->
+    <circle cx="345" cy="290" r="5" fill="#ffcd3c"/>
+    <circle cx="345" cy="290" r="9" fill="#ffcd3c" opacity="0.3"/>
+    <circle cx="365" cy="290" r="5" fill="#f5c660"/>
+    <circle cx="385" cy="290" r="5" fill="#c97a3e"/>
+
+    <!-- Buttons/dials -->
+    <circle cx="420" cy="290" r="7" fill="#3a3d44" stroke="#e8a838" stroke-width="1"/>
+    <line x1="420" y1="285" x2="420" y2="290" stroke="#f5c660" stroke-width="1.5"/>
+    <circle cx="445" cy="290" r="7" fill="#3a3d44" stroke="#e8a838" stroke-width="1"/>
+    <line x1="445" y1="290" x2="450" y2="293" stroke="#f5c660" stroke-width="1.5"/>
+
+    <!-- Emergency stop -->
+    <circle cx="400" cy="315" r="10" fill="#c0392b" stroke="#1a1a1a" stroke-width="2"/>
+    <text x="400" y="319" text-anchor="middle" font-family="Bebas Neue" font-size="9" fill="#f5f1e8">STOP</text>
+  </g>
+
+  <!-- BRAND PLATE on top -->
+  <rect x="280" y="195" width="240" height="25" fill="#1a1a1a" stroke="#e8a838" stroke-width="1" rx="2"/>
+  <text x="400" y="213" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#e8a838">EL BARAKA · GENERATOR</text>
+
+  <!-- EXHAUST PIPE -->
+  <rect x="555" y="120" width="18" height="80" fill="#3a3d44" stroke="#1a1a1a" stroke-width="2"/>
+  <ellipse cx="564" cy="120" rx="12" ry="5" fill="#1a1a1a" stroke="#3a3d44" stroke-width="1.5"/>
+  <!-- Smoke wisps -->
+  <g opacity="0.3">
+    <circle cx="564" cy="100" r="8" fill="#b8b1a0"/>
+    <circle cx="572" cy="85" r="10" fill="#b8b1a0"/>
+    <circle cx="558" cy="70" r="12" fill="#b8b1a0"/>
+  </g>
+
+  <!-- BASE / Skid -->
+  <rect x="170" y="420" width="460" height="15" fill="#1a1a1a" stroke="#b3791a" stroke-width="1"/>
+  <!-- Forklift slots -->
+  <rect x="220" y="425" width="40" height="10" fill="#15171b"/>
+  <rect x="540" y="425" width="40" height="10" fill="#15171b"/>
+
+  <!-- Hazard stripe on base -->
+  <pattern id="hz6" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
+    <rect width="10" height="6" fill="#ffcd3c"/>
+    <rect x="10" width="10" height="6" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="170" y="415" width="460" height="6" fill="url(#hz6)"/>
+
+  <!-- POWER OUTPUT badge -->
+  <g transform="translate(700, 250)">
+    <circle cx="0" cy="0" r="55" fill="#1a1a1a" stroke="#e8a838" stroke-width="3"/>
+    <polygon points="-12,-15 -5,-2 -10,-2 0,15 -5,3 5,3 -2,-15" fill="#e8a838" transform="translate(0,-3)"/>
+    <text x="0" y="20" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#e8a838">600KVA</text>
+    <text x="0" y="32" text-anchor="middle" font-family="Bebas Neue" font-size="9" fill="#f5c660">DIESEL</text>
+  </g>
+
+  <!-- Fuel cap -->
+  <circle cx="500" cy="200" r="6" fill="#3a3d44" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="500" y="184" text-anchor="middle" font-family="Bebas Neue" font-size="8" fill="#e8a838">FUEL</text>
+</svg></div>
         </div>
         <h3>مولد كهرباء</h3>
         <div class="en-name">DIESEL GENERATOR</div>
@@ -1495,7 +2416,176 @@
     <div class="ml-grid">
       <div class="ml-visual reveal">
         <div class="main-img">
-          <img src="https://image.made-in-china.com/202f0j00cVsanQyREIou/CE-Approved-14m-18m-22m-26m-27m-Diesel-Cummins-Engine-Construction-Lift-Boom-Lift.jpg" alt="مان لفت بجميع الأطوال" onerror="this.src='https://image.made-in-china.com/2f0j00BFnTPGOfodbN/Hydraulic-Diesel-Mini-40m-Telescopic-Boom-Trailer-Wheel-Lift-For-Sale.jpg'"/>
+          <div class="svg-illustration" role="img" aria-label="مان لفت بجميع الأطوال"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ft_sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0e10"/>
+      <stop offset="100%" stop-color="#1c1f25"/>
+    </linearGradient>
+    <linearGradient id="ft_gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c660"/>
+      <stop offset="100%" stop-color="#b3791a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#ft_sky)"/>
+
+  <!-- Vertical grid emphasizing height -->
+  <g opacity="0.15" stroke="#e8a838" stroke-width="0.5">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="400" x2="600" y2="400"/>
+    <line x1="0" y1="500" x2="600" y2="500"/>
+    <line x1="0" y1="600" x2="600" y2="600"/>
+    <line x1="100" y1="0" x2="100" y2="750"/>
+    <line x1="200" y1="0" x2="200" y2="750"/>
+    <line x1="300" y1="0" x2="300" y2="750"/>
+    <line x1="400" y1="0" x2="400" y2="750"/>
+    <line x1="500" y1="0" x2="500" y2="750"/>
+  </g>
+
+  <!-- Glow -->
+  <circle cx="450" cy="100" r="120" fill="#e8a838" opacity="0.08"/>
+
+  <!-- HEIGHT MARKERS along left side -->
+  <g opacity="0.6">
+    <line x1="40" y1="100" x2="40" y2="680" stroke="#e8a838" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <g font-family="Bebas Neue" font-size="13" fill="#e8a838">
+      <text x="50" y="105">40M</text>
+      <line x1="35" y1="100" x2="48" y2="100" stroke="#e8a838" stroke-width="2"/>
+
+      <text x="50" y="180">35M</text>
+      <line x1="35" y1="175" x2="48" y2="175" stroke="#e8a838" stroke-width="1.5" opacity="0.5"/>
+
+      <text x="50" y="245">30M</text>
+      <line x1="35" y1="240" x2="48" y2="240" stroke="#e8a838" stroke-width="2"/>
+
+      <text x="50" y="320">25M</text>
+      <line x1="35" y1="315" x2="48" y2="315" stroke="#e8a838" stroke-width="1.5" opacity="0.5"/>
+
+      <text x="50" y="390">20M</text>
+      <line x1="35" y1="385" x2="48" y2="385" stroke="#e8a838" stroke-width="2"/>
+
+      <text x="50" y="465">15M</text>
+      <line x1="35" y1="460" x2="48" y2="460" stroke="#e8a838" stroke-width="1.5" opacity="0.5"/>
+
+      <text x="50" y="535">10M</text>
+      <line x1="35" y1="530" x2="48" y2="530" stroke="#e8a838" stroke-width="2"/>
+
+      <text x="50" y="610">5M</text>
+      <line x1="35" y1="605" x2="48" y2="605" stroke="#e8a838" stroke-width="1.5" opacity="0.5"/>
+
+      <text x="55" y="685">0</text>
+    </g>
+  </g>
+
+  <!-- Ground -->
+  <line x1="0" y1="680" x2="600" y2="680" stroke="#e8a838" stroke-width="2" opacity="0.5"/>
+  <!-- Ground texture -->
+  <g opacity="0.2">
+    <line x1="0" y1="700" x2="600" y2="700" stroke="#b8b1a0" stroke-width="0.5"/>
+    <line x1="0" y1="720" x2="600" y2="720" stroke="#b8b1a0" stroke-width="0.5"/>
+  </g>
+
+  <!-- BOOM LIFT - massive, fully extended -->
+
+  <!-- Wheels -->
+  <circle cx="280" cy="665" r="32" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+  <circle cx="280" cy="665" r="16" fill="#3a3d44"/>
+  <circle cx="280" cy="665" r="7" fill="#1a1a1a"/>
+  <circle cx="420" cy="665" r="32" fill="#1a1a1a" stroke="#3a3d44" stroke-width="3"/>
+  <circle cx="420" cy="665" r="16" fill="#3a3d44"/>
+  <circle cx="420" cy="665" r="7" fill="#1a1a1a"/>
+  <!-- Tire treads -->
+  <g opacity="0.5">
+    <line x1="280" y1="635" x2="280" y2="643" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="312" y1="665" x2="304" y2="665" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="280" y1="697" x2="280" y2="689" stroke="#b8b1a0" stroke-width="2"/>
+    <line x1="248" y1="665" x2="256" y2="665" stroke="#b8b1a0" stroke-width="2"/>
+  </g>
+
+  <!-- Chassis -->
+  <rect x="230" y="610" width="240" height="60" fill="url(#ft_gold)" stroke="#b3791a" stroke-width="3" rx="5"/>
+  <!-- Hazard stripe -->
+  <pattern id="ft_hz" x="0" y="0" width="22" height="8" patternUnits="userSpaceOnUse">
+    <rect width="11" height="8" fill="#ffcd3c"/>
+    <rect x="11" width="11" height="8" fill="#1a1a1a"/>
+  </pattern>
+  <rect x="230" y="603" width="240" height="8" fill="url(#ft_hz)"/>
+  <!-- Brand -->
+  <rect x="270" y="630" width="160" height="22" fill="#1a1a1a" rx="2"/>
+  <text x="350" y="646" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#e8a838">EL BARAKA</text>
+  <!-- Details -->
+  <rect x="240" y="630" width="22" height="22" fill="#15171b" rx="2"/>
+  <rect x="438" y="630" width="22" height="22" fill="#15171b" rx="2"/>
+
+  <!-- Counterweight -->
+  <rect x="210" y="580" width="60" height="35" fill="#3a3d44" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="220" y1="588" x2="260" y2="588" stroke="#b8b1a0" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="598" x2="260" y2="598" stroke="#b8b1a0" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="608" x2="260" y2="608" stroke="#b8b1a0" stroke-width="1" opacity="0.5"/>
+
+  <!-- Turret -->
+  <rect x="320" y="575" width="120" height="40" fill="#b3791a" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="380" cy="575" r="25" fill="#e8a838" stroke="#1a1a1a" stroke-width="2.5"/>
+  <circle cx="380" cy="575" r="10" fill="#b3791a" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- BOOM EXTENDED VERTICALLY (3 telescoping sections going way up) -->
+  <!-- Lower section (angled out from turret) -->
+  <polygon points="380,575 400,555 470,420 450,400" fill="url(#ft_gold)" stroke="#1a1a1a" stroke-width="2"/>
+  <!-- Mid section -->
+  <polygon points="455,410 472,390 510,250 492,232" fill="url(#ft_gold)" stroke="#1a1a1a" stroke-width="2" opacity="0.95"/>
+  <!-- Upper section -->
+  <polygon points="498,242 514,225 535,140 520,127" fill="url(#ft_gold)" stroke="#1a1a1a" stroke-width="2" opacity="0.9"/>
+
+  <!-- Hydraulic cylinders -->
+  <line x1="395" y1="575" x2="455" y2="425" stroke="#3a3d44" stroke-width="7" stroke-linecap="round"/>
+  <line x1="397" y1="575" x2="453" y2="427" stroke="#b8b1a0" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Boom section detail lines (showing telescoping) -->
+  <g opacity="0.6" stroke="#1a1a1a" stroke-width="1">
+    <line x1="408" y1="540" x2="442" y2="572"/>
+    <line x1="436" y1="465" x2="455" y2="488"/>
+    <line x1="487" y1="335" x2="498" y2="345"/>
+    <line x1="503" y1="290" x2="513" y2="298"/>
+  </g>
+
+  <!-- BASKET / Platform at top -->
+  <g transform="translate(530, 125)">
+    <!-- Platform floor -->
+    <rect x="-35" y="20" width="80" height="10" fill="#b3791a" stroke="#1a1a1a" stroke-width="1"/>
+    <rect x="-35" y="20" width="80" height="3" fill="#f5c660"/>
+    <!-- Railings -->
+    <rect x="-35" y="-25" width="4" height="48" fill="#e8a838"/>
+    <rect x="42" y="-25" width="4" height="48" fill="#e8a838"/>
+    <rect x="-35" y="-25" width="80" height="3" fill="#e8a838"/>
+    <rect x="-35" y="-5" width="80" height="2" fill="#e8a838" opacity="0.7"/>
+    <!-- Vertical posts mid -->
+    <line x1="0" y1="-25" x2="0" y2="20" stroke="#b3791a" stroke-width="2" opacity="0.6"/>
+    <!-- Worker -->
+    <circle cx="-5" cy="-12" r="7" fill="#ffcd3c"/>
+    <rect x="-9" y="-5" width="9" height="22" fill="#ffcd3c"/>
+    <!-- Hard hat detail -->
+    <rect x="-10" y="-18" width="10" height="3" fill="#f5c660"/>
+  </g>
+
+  <!-- "MAX HEIGHT" callout at top -->
+  <g transform="translate(450, 80)">
+    <line x1="0" y1="50" x2="80" y2="50" stroke="#e8a838" stroke-width="1" stroke-dasharray="2 3"/>
+    <line x1="80" y1="20" x2="80" y2="80" stroke="#e8a838" stroke-width="1.5"/>
+    <text x="100" y="30" font-family="Bebas Neue" font-size="14" fill="#e8a838">MAX</text>
+    <text x="100" y="55" font-family="Bebas Neue" font-size="20" fill="#f5c660">40M</text>
+    <text x="100" y="72" font-family="Bebas Neue" font-size="10" fill="#b8b1a0">REACH</text>
+  </g>
+
+  <!-- Decorative arrow showing height -->
+  <g opacity="0.5">
+    <line x1="100" y1="600" x2="100" y2="180" stroke="#e8a838" stroke-width="1.5"/>
+    <polygon points="100,170 95,182 105,182" fill="#e8a838"/>
+    <polygon points="100,610 95,598 105,598" fill="#e8a838"/>
+    <text x="110" y="395" font-family="Bebas Neue" font-size="12" fill="#e8a838" transform="rotate(-90, 110, 395)">FULL EXTENSION</text>
+  </g>
+</svg></div>
         </div>
         <div class="ruler"></div>
         <div class="height-badge">
